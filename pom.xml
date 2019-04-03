@@ -11,6 +11,7 @@
     <modules>
         <module>util</module>
         <module>redis</module>
+        <module>hadoop</module>
     </modules>
 
     <properties>
@@ -20,11 +21,34 @@
 
         <redisVserion>2.8.1</redisVserion>
         <logVersion>2.11.1</logVersion>
-
+        <slf4jVer>1.7.25</slf4jVer>
+        <junitVersion>4.12</junitVersion>
     </properties>
 
     <dependencies>
+        <!--log-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${logVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4jVer}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>${slf4jVer}</version>
+        </dependency>
 
+        <!--test-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junitVersion}</version>
+        </dependency>
     </dependencies>
 
     <build>

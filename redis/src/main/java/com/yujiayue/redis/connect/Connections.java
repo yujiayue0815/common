@@ -25,7 +25,7 @@ public interface Connections {
             else
                 return Sentine.get();
         } else {
-            System.out.println("Please,use get method and no param  when redis is cluster. ");
+            System.out.println("When using redis clustering, use get methods that have no parameters.");
             return null;
         }
     }
