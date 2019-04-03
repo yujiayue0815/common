@@ -3,6 +3,7 @@ package com.yujiayue.hadoop.hdfs;
 
 import com.yujiayue.hadoop.constant.HdfsEnum;
 import com.yujiayue.util.Resources;
+import com.yujiayue.util.Strings;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.slf4j.Logger;
@@ -17,6 +18,10 @@ import java.net.URISyntaxException;
  */
 public class HdfsClient {
     private static final Logger log = LoggerFactory.getLogger(HdfsClient.class);
+    /**
+     * hdfs 配置文件
+     */
+    private static final String HDFS_CONFIG = "hdfs";
 
     private static volatile ThreadLocal<FileSystem> fileSystemLocal = new ThreadLocal<>();
 
@@ -35,11 +40,6 @@ public class HdfsClient {
 
     }
 
-    /**
-     * hdfs 配置文件
-     */
-    private static final String HDFS_CONFIG = "hdfs";
-
 
     /**
      * 初始化
@@ -50,11 +50,17 @@ public class HdfsClient {
      */
     private static void init() throws IOException, URISyntaxException, InterruptedException {
         Configuration configuration = new Configuration();
-        String replication = Resources.getString(HDFS_CONFIG, HdfsEnum.REPLICATION.getValue());
-        configuration.set(HdfsEnum.REPLICATION.getValue(), replication);
         String user = Resources.getString(HDFS_CONFIG, HdfsEnum.USER.getValue());
         String url = Resources.getString(HDFS_CONFIG, HdfsEnum.HADOOP_URL.getValue());
-        fileSystemLocal.set(FileSystem.get(new URI(url), configuration, user));
+        if (Strings.notEmpty(url)) {
+            if (Strings.notEmpty(user)) {
+                fileSystemLocal.set(FileSystem.get(new URI(url), configuration, user));
+            } else {
+                log.error("User is none.");
+            }
+        } else {
+            log.error("Url is none.");
+        }
     }
 
     /**

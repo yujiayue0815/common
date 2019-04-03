@@ -4,11 +4,6 @@ package com.yujiayue.hadoop.constant;
  * hdfs 配置
  */
 public enum HdfsEnum {
-
-    /**
-     * 副本数量
-     */
-    REPLICATION("dfs.replication"),
     /**
      * 用户
      */
@@ -17,8 +12,7 @@ public enum HdfsEnum {
     /**
      * url
      */
-    HADOOP_URL("url")
-    ;
+    HADOOP_URL("url");
 
     HdfsEnum(String value) {
         this.value = value;
