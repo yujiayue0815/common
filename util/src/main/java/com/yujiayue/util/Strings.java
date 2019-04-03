@@ -1,5 +1,10 @@
 package com.yujiayue.util;
 
+/**
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:47
+ * @description : 字符串处理
+ */
 public interface Strings {
 
     /**

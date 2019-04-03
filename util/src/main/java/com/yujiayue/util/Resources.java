@@ -5,7 +5,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.ResourceBundle;
-
+/**
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:46
+ * @description : 资源获取
+ *
+ */
 public interface Resources {
 
 

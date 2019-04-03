@@ -1,7 +1,9 @@
 package com.yujiayue.hadoop.constant;
 
 /**
- * hdfs 配置
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:39
+ * @description : hdfs 配置
  */
 public enum HdfsEnum {
     /**

@@ -5,6 +5,12 @@ import com.yujiayue.util.exception.TypeNotClassException;
 
 import java.io.FileNotFoundException;
 
+/**
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:46
+ * @description : 日期格式化工具
+ *
+ */
 public interface ClassPath {
 
     /**

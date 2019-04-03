@@ -6,6 +6,12 @@ import com.yujiayue.util.Strings;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+/**
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:40
+ * @description : 链接池
+ *
+ */
 public class Pool {
     private static volatile JedisPool jedisPool = null;
 

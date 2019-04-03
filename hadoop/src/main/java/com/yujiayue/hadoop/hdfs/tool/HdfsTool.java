@@ -13,7 +13,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * hdfs 客户端工具
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:36
+ * @description : hdfs 工具类
  */
 public class HdfsTool {
 

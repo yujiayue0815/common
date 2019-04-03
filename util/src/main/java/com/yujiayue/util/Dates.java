@@ -5,7 +5,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 日期格式化工具
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:46
+ * @description : 日期格式化工具
+ *
  */
 public interface Dates {
 

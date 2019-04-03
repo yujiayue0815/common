@@ -5,7 +5,10 @@ import com.yujiayue.util.Resources;
 import redis.clients.jedis.Jedis;
 
 /**
- * 获取一个连接
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:40
+ * @description : 获取一个连接
+ *
  */
 public class Jediss {
 

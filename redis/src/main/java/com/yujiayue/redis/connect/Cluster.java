@@ -9,7 +9,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 集群连接方式
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:40
+ * @description : 集群连接方式
+ *
  */
 public class Cluster {
 

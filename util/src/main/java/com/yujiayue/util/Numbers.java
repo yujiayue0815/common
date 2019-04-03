@@ -3,7 +3,10 @@ package com.yujiayue.util;
 import java.text.DecimalFormat;
 
 /**
- * 数字工具类
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:46
+ * @description : 数字工具类
+ *
  */
 public interface Numbers {
 

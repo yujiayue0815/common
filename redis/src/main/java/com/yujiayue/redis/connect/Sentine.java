@@ -2,6 +2,7 @@ package com.yujiayue.redis.connect;
 
 import com.yujiayue.redis.constant.ConfigFileEnum;
 import com.yujiayue.util.Resources;
+import com.yujiayue.util.Strings;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisSentinelPool;
 
@@ -9,7 +10,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 高可用哨兵模式连接，读写分离
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:42
+ * @description : 高可用哨兵模式连接，读写分离
  */
 public class Sentine {
 
@@ -32,7 +35,7 @@ public class Sentine {
         String port = Resources.getString(ConfigFileEnum.CONFILE_FILE_NAME.getValue(), ConfigFileEnum.PORT.getValue());
         String masterName = Resources.getString(ConfigFileEnum.CONFILE_FILE_NAME.getValue(), ConfigFileEnum.MASTER_NAME.getValue());
         String split = ConfigFileEnum.SPLIT.getValue();
-        assert port != null;
+        port = Strings.empty(port) ? "6379" : port;
         String[] ports = port.split(split);
         if (ports.length > 1) {
             if (jedisSentinelPool == null) {

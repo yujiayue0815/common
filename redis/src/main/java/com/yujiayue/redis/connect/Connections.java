@@ -6,7 +6,10 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
 
 /**
- * 获取连接
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:40
+ * @description : 获取连接
+ *
  */
 public interface Connections {
 

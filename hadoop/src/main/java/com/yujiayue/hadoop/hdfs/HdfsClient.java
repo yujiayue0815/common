@@ -14,7 +14,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
- * hdfs 客户端
+ * @author : 余嘉悦
+ * @date : 2019/4/3 15:38
+ * @description : hdfs 客户端
  */
 public class HdfsClient {
     private static final Logger log = LoggerFactory.getLogger(HdfsClient.class);
