@@ -12,6 +12,7 @@
         <module>util</module>
         <module>redis</module>
         <module>hadoop</module>
+        <module>zookeeper</module>
     </modules>
 
     <properties>

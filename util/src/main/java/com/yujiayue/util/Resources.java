@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.ResourceBundle;
+
 /**
  * @author : 余嘉悦
  * @date : 2019/4/3 15:46
  * @description : 资源获取
- *
  */
 public interface Resources {
 
@@ -30,16 +30,20 @@ public interface Resources {
 
     /**
      * 通过bandle 获取配置文件信息
+     *
      * @param path
      * @param key
      * @return
      */
     static String getString(String path, String key) {
-        ResourceBundle bundle = getBundle(path);
-        if (bundle != null)
-            return bundle.getString(key);
-        else
-            return null;
+        String s = null;
+        try {
+            ResourceBundle bundle = getBundle(path);
+            if (bundle != null)
+                s = bundle.getString(key);
+        } catch (Exception e) {
+        }
+        return s;
     }
 
 
