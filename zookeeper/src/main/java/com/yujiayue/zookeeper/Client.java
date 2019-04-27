@@ -177,7 +177,9 @@ public class Client {
 
 
     /**
-     * @param path
+     * Children list name.
+     *
+     * @param path Zookeeper node path.
      * @return
      */
     static List<String> getChildren(String path) {
@@ -185,9 +187,7 @@ public class Client {
         List<String> s = null;
         try {
             s = zooKeeper.getChildren(path, false);
-        } catch (KeeperException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+        } catch (KeeperException | InterruptedException e) {
             e.printStackTrace();
         } finally {
             close();
@@ -201,14 +201,14 @@ public class Client {
      * @return ZooKeeper
      * @throws IOException
      */
-    public static ZooKeeper get() {
+    static ZooKeeper get() {
         return zooKeeperThreadLocal.get();
     }
 
     /**
      * Close zookeeper.
      */
-    public static void close() {
+    static void close() {
         ZooKeeper zooKeeper = zooKeeperThreadLocal.get();
         if (zooKeeper != null) {
             try {

@@ -13,6 +13,7 @@
         <module>redis</module>
         <module>hadoop</module>
         <module>zookeeper</module>
+        <module>kafka</module>
     </modules>
 
     <properties>
