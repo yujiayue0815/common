@@ -8,7 +8,6 @@ import java.util.Properties;
 
 public class ProducersCallback {
 
-
     public static void main(String[] args) {
 
 
