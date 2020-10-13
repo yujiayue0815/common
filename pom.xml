@@ -25,7 +25,7 @@
         <redisVserion>2.8.1</redisVserion>
         <logVersion>2.11.1</logVersion>
         <slf4jVer>1.7.25</slf4jVer>
-        <junitVersion>4.12</junitVersion>
+        <junitVersion>4.13.1</junitVersion>
     </properties>
 
     <dependencies>
