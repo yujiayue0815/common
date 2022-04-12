@@ -11,7 +11,7 @@
 
     <artifactId>hadoop</artifactId>
     <properties>
-        <hadoopVersion>2.7.2</hadoopVersion>
+        <hadoopVersion>3.2.3</hadoopVersion>
     </properties>
 
     <dependencies>
